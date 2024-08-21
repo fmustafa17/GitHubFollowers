@@ -13,11 +13,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        
+        let searchNC = UINavigationController(rootViewController: SearchViewController())
+        let favoritesNC = UINavigationController(rootViewController: FavoritesListViewController())
+        
+        let tabBar = UITabBarController()
+        tabBar.viewControllers = [searchNC, favoritesNC]
+        
         // Launch the initial view controller without the storyboard
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = ViewController()
+        window?.rootViewController = tabBar
         window?.makeKeyAndVisible()
     }
 
