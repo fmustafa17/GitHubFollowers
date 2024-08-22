@@ -14,8 +14,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        let searchNC = UINavigationController(rootViewController: SearchViewController())
-        let favoritesNC = UINavigationController(rootViewController: FavoritesListViewController())
+        let searchNC = addSearchNavController()
+        let favoritesNC = addFavoriteNavController()
         
         let tabBar = UITabBarController()
         tabBar.viewControllers = [searchNC, favoritesNC]
@@ -26,6 +26,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.rootViewController = tabBar
         window?.makeKeyAndVisible()
+    }
+    
+    func addSearchNavController() -> UINavigationController {
+        let searchNC = SearchViewController()
+        searchNC.title = "Search"
+        searchNC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+        return UINavigationController(rootViewController: searchNC)
+    }
+
+    func addFavoriteNavController() -> UINavigationController {
+        let faveNC = FavoritesListViewController()
+        faveNC.title = "Favorite"
+        faveNC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
+        return UINavigationController(rootViewController: faveNC)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
