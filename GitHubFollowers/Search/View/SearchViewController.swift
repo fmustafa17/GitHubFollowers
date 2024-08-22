@@ -19,6 +19,8 @@ class SearchViewController: UIViewController {
         configureLogoView()
         configureTextField()
         configureCallToActionButton()
+        createDismissKeyboardTapGesture()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,6 +28,7 @@ class SearchViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
     }
     
+    // MARK: - UI configuration
     func configureLogoView() {
         view.addSubview(logoImageView)
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -63,6 +66,12 @@ class SearchViewController: UIViewController {
             callToActionButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
             callToActionButton.heightAnchor.constraint(equalToConstant: 50)
         ])
+    }
+    
+    // MARK: - Gesture Recognizer
+    func createDismissKeyboardTapGesture() {
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
     }
 
 }
