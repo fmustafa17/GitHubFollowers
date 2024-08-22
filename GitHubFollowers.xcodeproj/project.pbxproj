@@ -62,15 +62,12 @@
 		D883DF7B2C759DBD00A5B1C8 /* GitHubFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				D883DF8A2C759DBF00A5B1C8 /* Info.plist */,
+				D883DF9E2C76EDF700A5B1C8 /* Support Files */,
 				D883DF9C2C76EDC400A5B1C8 /* Favorites */,
 				D883DF9A2C76EDA900A5B1C8 /* Search */,
 				D883DF992C76ED9700A5B1C8 /* View */,
 				D883DF982C76ED7E00A5B1C8 /* Components */,
-				D883DF7C2C759DBD00A5B1C8 /* AppDelegate.swift */,
-				D883DF7E2C759DBD00A5B1C8 /* SceneDelegate.swift */,
-				D883DF852C759DBF00A5B1C8 /* Assets.xcassets */,
-				D883DF872C759DBF00A5B1C8 /* LaunchScreen.storyboard */,
-				D883DF8A2C759DBF00A5B1C8 /* Info.plist */,
 			);
 			path = GitHubFollowers;
 			sourceTree = "<group>";
@@ -122,6 +119,17 @@
 				D883DF922C75A35C00A5B1C8 /* FavoritesListViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D883DF9E2C76EDF700A5B1C8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D883DF7C2C759DBD00A5B1C8 /* AppDelegate.swift */,
+				D883DF7E2C759DBD00A5B1C8 /* SceneDelegate.swift */,
+				D883DF852C759DBF00A5B1C8 /* Assets.xcassets */,
+				D883DF872C759DBF00A5B1C8 /* LaunchScreen.storyboard */,
+			);
+			path = "Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

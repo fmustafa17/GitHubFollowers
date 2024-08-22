@@ -20,7 +20,7 @@ class GitHubFollowersButton: UIButton {
     init(backgroundColor: UIColor, title: String) {
         super.init(frame: .zero) // height and width will be set during constraint configuration
         self.backgroundColor = backgroundColor
-        self.setTitle(title, for: .normal) 
+        self.setTitle(title, for: .normal)
         configure()
     }
     
