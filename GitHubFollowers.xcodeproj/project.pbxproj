@@ -15,6 +15,7 @@
 		D883DF912C75A33B00A5B1C8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D883DF902C75A33B00A5B1C8 /* SearchViewController.swift */; };
 		D883DF932C75A35C00A5B1C8 /* FavoritesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D883DF922C75A35C00A5B1C8 /* FavoritesListViewController.swift */; };
 		D883DF952C76E66800A5B1C8 /* GitHubFollowersButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D883DF942C76E66800A5B1C8 /* GitHubFollowersButton.swift */; };
+		D883DF972C76EC6000A5B1C8 /* GitHubFollowersTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D883DF962C76EC6000A5B1C8 /* GitHubFollowersTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D883DF902C75A33B00A5B1C8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D883DF922C75A35C00A5B1C8 /* FavoritesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewController.swift; sourceTree = "<group>"; };
 		D883DF942C76E66800A5B1C8 /* GitHubFollowersButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubFollowersButton.swift; sourceTree = "<group>"; };
+		D883DF962C76EC6000A5B1C8 /* GitHubFollowersTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubFollowersTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				D883DF8A2C759DBF00A5B1C8 /* Info.plist */,
 				D883DF902C75A33B00A5B1C8 /* SearchViewController.swift */,
 				D883DF922C75A35C00A5B1C8 /* FavoritesListViewController.swift */,
+				D883DF962C76EC6000A5B1C8 /* GitHubFollowersTextField.swift */,
 			);
 			path = GitHubFollowers;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				D883DF952C76E66800A5B1C8 /* GitHubFollowersButton.swift in Sources */,
 				D883DF7D2C759DBD00A5B1C8 /* AppDelegate.swift in Sources */,
 				D883DF912C75A33B00A5B1C8 /* SearchViewController.swift in Sources */,
+				D883DF972C76EC6000A5B1C8 /* GitHubFollowersTextField.swift in Sources */,
 				D883DF7F2C759DBD00A5B1C8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
