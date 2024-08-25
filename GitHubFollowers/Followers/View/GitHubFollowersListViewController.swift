@@ -5,6 +5,7 @@
 //  Created by Farhana Mustafa on 8/22/24.
 //
 
+import Combine
 import UIKit
 
 class GitHubFollowersListViewController: UIViewController {
@@ -14,7 +15,7 @@ class GitHubFollowersListViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         do {
-            try NetworkManager.shared.getFollowers(for: username, page: 0)
+            try NetworkManager.shared.getFollowers(for: username, page: 1)
         } catch {
             print(error.localizedDescription)
         }

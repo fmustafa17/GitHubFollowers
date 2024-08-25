@@ -28,11 +28,19 @@ class NetworkManager {
     func getFollowers(for username: String, page: Int) throws {
         let endpoint: String = Constants.baseURL.rawValue + "\(username)/followers?per_page=100&page=\(page)"
         
+        let bearerToken = ""
+        
         guard let url = URL(string: endpoint) else {
              throw APIError.invalidURL
         }
 
-        URLSession.shared.dataTaskPublisher(for: url)
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("application/vnd.github+json", forHTTPHeaderField: "Accept")
+        request.setValue("Bearer \(bearerToken)", forHTTPHeaderField: "Authorization")
+        request.setValue("2022-11-28", forHTTPHeaderField: "X-GitHub-Api-Version")
+
+        URLSession.shared.dataTaskPublisher(for: request)
             .map(\.data)
             .decode(type: [Follower].self, decoder: JSONDecoder())
             .receive(on: DispatchQueue.main)
