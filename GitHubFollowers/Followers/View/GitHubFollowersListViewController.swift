@@ -13,6 +13,11 @@ class GitHubFollowersListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        do {
+            try NetworkManager.shared.getFollowers(for: username, page: 0)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
