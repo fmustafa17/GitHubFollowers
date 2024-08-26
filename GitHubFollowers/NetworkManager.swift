@@ -16,7 +16,7 @@ enum APIError: Error {
 class NetworkManager {
     static let shared = NetworkManager()
     
-    @Published var followers: [Follower] = []
+    @Published var followers: Follower = []
     private var cancellables = Set<AnyCancellable>()
 
     private init() {}
@@ -42,7 +42,7 @@ class NetworkManager {
 
         URLSession.shared.dataTaskPublisher(for: request)
             .map(\.data)
-            .decode(type: [Follower].self, decoder: JSONDecoder())
+            .decode(type: Follower.self, decoder: JSONDecoder())
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 if case .failure(let error) = completion {
