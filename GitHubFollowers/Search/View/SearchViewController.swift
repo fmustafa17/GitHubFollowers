@@ -78,7 +78,7 @@ class SearchViewController: UIViewController {
     
     @objc func pushFollowerListVC() {
         let followerListVC = GitHubFollowersListViewController()
-        followerListVC.username = userNameTextField.text
+        followerListVC.username = userNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         followerListVC.title = userNameTextField.text
         navigationController?.pushViewController(followerListVC, animated: true)
     }
