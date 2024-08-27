@@ -13,7 +13,7 @@ enum APIError: Error {
     case serverError
 }
 
-class NetworkManager {
+class NetworkManager: ObservableObject {
     static let shared = NetworkManager()
     
     @Published var followers: Follower = []
@@ -28,7 +28,7 @@ class NetworkManager {
     func getFollowers(for username: String, page: Int) throws {
         let endpoint: String = Constants.baseURL.rawValue + "\(username)/followers?per_page=100&page=\(page)"
         
-        let bearerToken = ""
+        let bearerToken = "<YOUR_PERSONAL_TOKEN_HERE>"
         
         guard let url = URL(string: endpoint) else {
              throw APIError.invalidURL
